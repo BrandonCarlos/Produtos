@@ -1,0 +1,6 @@
+spring:
+    application.name: servico-produtos
+server:
+    port: 9191
+    error.include-stacktrace: never
+
