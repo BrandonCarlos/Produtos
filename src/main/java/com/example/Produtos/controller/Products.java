@@ -28,12 +28,10 @@ public class Products {
 
     @GetMapping("/produtos/search/{search}")
     public List<Object> searchOfProduct(@PathVariable("search") String search) {
-        String uri = "https://dummyjson.com/products/search?q=phone" + search;
+        String uri = "https://dummyjson.com/products/search?q=" + search;
         RestTemplate template = new RestTemplate();
         Object[] objects = new Object[]{template.getForObject(uri, Object.class)};
         return Arrays.asList(objects);
     }
-
-
 
 }
